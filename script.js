@@ -59,18 +59,24 @@ function init() {
     });
   });
 
-// Header scroll effects
-window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
+  // Header scroll effects
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
 
-  if (currentScrollY > 100) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
+    if (currentScrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
 
-  // أزلنا الكود اللي يخفي/يظهر الهيدر
-});
+    if (currentScrollY > lastScrollY && currentScrollY > 200) {
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      header.style.transform = 'translateY(0)';
+    }
+
+    lastScrollY = currentScrollY;
+  });
 
   // Intersection Observer for animations
   const observerOptions = {
