@@ -141,7 +141,7 @@ p {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 0.1rem 0;
 }
 
 .navbar .container {
@@ -655,7 +655,7 @@ border: 2px solid rgba(255, 255, 255, 0.2);
 .testimonials .section-header h2,
 .testimonials .section-divider {
     color: white;
-    background: linear-gradient(90deg, white, #b8860b, white);
+    /* background: linear-gradient(90deg, white, #000000, white); */
 }
 
 .testimonials .section-subtitle {

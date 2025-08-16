@@ -322,18 +322,6 @@ function init() {
   // Initialize aria-expanded attribute for mobile menu toggle
   mobileMenuToggle.setAttribute('aria-expanded', 'false');
 
-  // Accessibility skip link
-  const skipLink = document.createElement('a');
-  skipLink.href = '#main-content';
-  skipLink.className = 'skip-to-content';
-  skipLink.textContent = 'تخطي إلى المحتوى الرئيسي';
-  document.body.insertBefore(skipLink, document.body.firstChild);
-
-  const heroSection = document.getElementById('home');
-  if (heroSection) {
-    heroSection.id = 'main-content';
-    heroSection.setAttribute('tabindex', '-1');
-  }
 }
 
 // Styles for notification animation (يُحقن تلقائياً)
